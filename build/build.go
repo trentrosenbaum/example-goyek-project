@@ -17,6 +17,6 @@ var build = goyek.Define(goyek.Task{
 			a.Fatal(err)
 		}
 		ext := strings.TrimSpace(string(extBytes))
-		cmd.Exec(a, `go build -ldflags="-s -w" -o dist/app`+ext)
+		cmd.Exec(a, `CGO_ENABLED=1 go build -ldflags="-s -w" -o dist/app`+ext)
 	},
 })
