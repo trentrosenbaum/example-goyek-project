@@ -7,6 +7,7 @@ var all = goyek.Define(goyek.Task{
 	Usage: "build pipeline",
 	Deps: goyek.Deps{
 		mod,
+		fmt,
 		build,
 		spell,
 		lint,
